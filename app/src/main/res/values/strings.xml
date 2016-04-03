@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">GetInLine</string>
+    <string name="app_name">Get In Line</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Sign in</string>
+    <string name="register">Register</string>
 </resources>
