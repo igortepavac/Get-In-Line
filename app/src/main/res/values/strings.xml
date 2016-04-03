@@ -7,7 +7,8 @@
     <string name="registration_email_hint">Email</string>
     <string name="registration_password_hint">Password</string>
     <string name="registration_retype_password_hint">Retype password</string>
-    <string name="registration_date_of_birth_hint">Date of Birth</string>
+    <string name="registration_date_of_birth_hint">Date of birth</string>
     <string name="registration_button_add_avatar">Add avatar</string>
     <string name="registration_register_button_text">Register</string>
+    <string name="splash_app_name">GetInLine</string>
 </resources>

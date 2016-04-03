@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -49,6 +49,13 @@
 
     <style name="BorderlessButton.Register">
         <!-- TODO: Customize -->
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimaryDark"
+              tools:targetApi="lollipop">
+            @color/colorPrimaryDark
+        </item>
     </style>
 
 </resources>
