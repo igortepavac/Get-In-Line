@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/default_spacing"
+        android:background="@color/colorPrimary"
+        tools:context="com.feelsgoodman.getinline.activities.SplashActivity">
+
+        <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/splash_app_logo"
+                android:scaleType="fitXY"
+                android:layout_margin="@dimen/default_spacing"
+                android:layout_centerInParent="true"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/splash_app_name"
+                android:text="@string/splash_app_name"
+                android:layout_below="@+id/splash_app_logo"
+                android:paddingBottom="100dp"
+                android:gravity="top|center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:visibility="invisible"
+                />
+
+</RelativeLayout>
