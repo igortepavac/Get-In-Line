@@ -24,7 +24,8 @@ public class LoginActivity extends BaseActivity {
 
     @OnClick(R.id.btn_register)
     public void registerClicked() {
-        startActivity(new Intent(this, RegistrationActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
+        //startActivity(new Intent(this, RegistrationActivity.class));
     }
 
     @Override
