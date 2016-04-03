@@ -1,6 +1,6 @@
 package com.feelsgoodman.getinline.dagger.modules;
 
-import com.feelsgoodman.getinline.GetInLineApplication;
+import com.feelsgoodman.getinline.GetInLineApp;
 import com.feelsgoodman.getinline.network.ApiService;
 
 import dagger.Module;
@@ -14,6 +14,6 @@ public class NetworkModule {
 
     @Provides
     public ApiService provideApiService(){
-        return GetInLineApplication.getInstance().getApiService();
+        return GetInLineApp.getInstance().getApiService();
     }
 }

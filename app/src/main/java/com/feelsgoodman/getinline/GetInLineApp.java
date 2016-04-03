@@ -10,19 +10,19 @@ import javax.inject.Inject;
 /**
  * Created by itepavac on 03/04/16.
  */
-public class GetInLineApplication extends Application {
+public class GetInLineApp extends Application {
 
-    protected static GetInLineApplication instance;
+    protected static GetInLineApp instance;
 
     @Inject
     ApiService apiService;
 
-    public static GetInLineApplication getInstance() {
+    public static GetInLineApp getInstance() {
         return instance;
     }
 
-    public static void setInstance(GetInLineApplication instance) {
-        GetInLineApplication.instance = instance;
+    public static void setInstance(GetInLineApp instance) {
+        GetInLineApp.instance = instance;
     }
 
     @Override

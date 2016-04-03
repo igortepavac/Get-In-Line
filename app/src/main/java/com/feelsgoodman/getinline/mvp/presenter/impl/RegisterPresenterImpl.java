@@ -7,4 +7,8 @@ import com.feelsgoodman.getinline.mvp.presenter.RegisterPresenter;
  */
 public class RegisterPresenterImpl implements RegisterPresenter {
 
+    @Override
+    public void cancel() {
+
+    }
 }

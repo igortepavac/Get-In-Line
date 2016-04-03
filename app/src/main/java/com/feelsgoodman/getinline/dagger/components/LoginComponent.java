@@ -1,5 +1,6 @@
 package com.feelsgoodman.getinline.dagger.components;
 
+import com.feelsgoodman.getinline.activities.LoginActivity;
 import com.feelsgoodman.getinline.dagger.modules.LoginModule;
 import com.feelsgoodman.getinline.dagger.modules.NetworkModule;
 
@@ -14,4 +15,5 @@ import dagger.Component;
 })
 public interface LoginComponent {
 
+    void inject(LoginActivity activity);
 }

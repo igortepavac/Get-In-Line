@@ -1,6 +1,6 @@
 package com.feelsgoodman.getinline.dagger.components;
 
-import com.feelsgoodman.getinline.GetInLineApplication;
+import com.feelsgoodman.getinline.GetInLineApp;
 import com.feelsgoodman.getinline.dagger.modules.ApiModule;
 import com.feelsgoodman.getinline.dagger.modules.AppContextModule;
 import com.feelsgoodman.getinline.dagger.modules.ClientModule;
@@ -23,5 +23,5 @@ import dagger.Component;
 
 public interface AppComponent {
 
-    void inject(GetInLineApplication app);
+    void inject(GetInLineApp app);
 }

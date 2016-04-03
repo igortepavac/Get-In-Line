@@ -1,46 +1,46 @@
-package com.feelsgoodman.getinline.activities;
+package com.feelsgoodman.getinline.fragments;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.feelsgoodman.getinline.R;
+import com.feelsgoodman.getinline.activities.BaseActivity;
 import com.feelsgoodman.getinline.mvp.view.BaseView;
 
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.text.Html;
 
 /**
- * Created by itepavac on 03/04/16.
+ * Created by noxqs on 04.04.16..
  */
-public class BaseActivity extends AppCompatActivity implements BaseView {
+public class BaseFragment extends Fragment implements BaseView {
 
     private MaterialDialog progressDialog;
 
     @Override
     public void showProgress() {
         if (progressDialog == null || !progressDialog.isShowing()) {
-            progressDialog = new MaterialDialog.Builder(this)
+            progressDialog = new MaterialDialog.Builder(getActivity())
                     .title(R.string.app_name)
                     .content(R.string.please_wait)
                     .progress(true, 0)
                     .build();
             progressDialog.setCanceledOnTouchOutside(false);
         }
-        if (!isFinishing()) {
+        if (!isRemoving()) {
             progressDialog.show();
         }
     }
 
     @Override
     public void hideProgress() {
-        if (progressDialog != null && progressDialog.isShowing() && !isFinishing()) {
+        if (progressDialog != null && progressDialog.isShowing() && !isRemoving()) {
             progressDialog.dismiss();
         }
     }
 
     @Override
     public void showError(String message) {
-        final AlertDialogWrapper.Builder matBuilder = new AlertDialogWrapper.Builder(this);
+        final AlertDialogWrapper.Builder matBuilder = new AlertDialogWrapper.Builder(getActivity());
         matBuilder.setTitle(R.string.app_name);
 
         if (message != null) {
@@ -49,28 +49,19 @@ public class BaseActivity extends AppCompatActivity implements BaseView {
             matBuilder.setMessage("");
         }
         matBuilder.setPositiveButton(android.R.string.ok, null);
-        if (!isFinishing()) {
+        if (!isRemoving()) {
             matBuilder.show();
         }
+
     }
 
     @Override
     public void showDialog(String title, String message, MaterialDialog.SingleButtonCallback positiveCallback,
             MaterialDialog.SingleButtonCallback negativeCallback, String positiveButtonText, String negativeButtonText) {
-        MaterialDialog basicDialog = new MaterialDialog.Builder(this)
-                .title(title)
-                .content(message)
-                .positiveText(positiveButtonText)
-                .positiveColor(ContextCompat.getColor(this, R.color.colorAccent))
-                .onPositive(positiveCallback)
-                .onNegative(negativeCallback)
-                .negativeText(negativeButtonText)
-                .negativeColor(ContextCompat.getColor(this, R.color.colorAccent))
-                .build();
-        basicDialog.setCanceledOnTouchOutside(false);
+        getBaseActivity().showDialog(title, message, positiveCallback, negativeCallback, positiveButtonText, negativeButtonText);
+    }
 
-        if (!isFinishing()) {
-            basicDialog.show();
-        }
+    protected BaseActivity getBaseActivity() {
+        return (BaseActivity) getActivity();
     }
 }

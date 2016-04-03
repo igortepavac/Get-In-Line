@@ -7,4 +7,8 @@ import com.feelsgoodman.getinline.mvp.interactor.LoginInteractor;
  */
 public class LoginInteractorImpl implements LoginInteractor {
 
+    @Override
+    public void cancel() {
+
+    }
 }

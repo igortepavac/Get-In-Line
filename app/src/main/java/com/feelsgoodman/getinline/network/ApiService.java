@@ -5,4 +5,5 @@ package com.feelsgoodman.getinline.network;
  */
 public interface ApiService {
 
+    //TODO request calls
 }

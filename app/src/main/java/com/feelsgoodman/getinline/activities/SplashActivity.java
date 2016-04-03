@@ -8,13 +8,12 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     @Bind(R.id.splash_app_name)
     TextView splashAppName;
@@ -37,7 +36,7 @@ public class SplashActivity extends AppCompatActivity {
                         .setDuration(1000)
                         .animate();
             }
-        }, 500);
+        }, 300);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

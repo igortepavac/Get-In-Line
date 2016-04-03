@@ -1,6 +1,6 @@
 package com.feelsgoodman.getinline.dagger.modules;
 
-import com.feelsgoodman.getinline.GetInLineApplication;
+import com.feelsgoodman.getinline.GetInLineApp;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -16,7 +16,7 @@ public class AppContextModule {
 
     @Provides
     public Context provideContext() {
-        return GetInLineApplication.getInstance();
+        return GetInLineApp.getInstance();
     }
 
     @Provides

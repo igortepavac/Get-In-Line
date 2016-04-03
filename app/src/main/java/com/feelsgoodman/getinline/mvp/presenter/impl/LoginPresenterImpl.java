@@ -7,4 +7,8 @@ import com.feelsgoodman.getinline.mvp.presenter.LoginPresenter;
  */
 public class LoginPresenterImpl implements LoginPresenter {
 
+    @Override
+    public void cancel() {
+
+    }
 }
