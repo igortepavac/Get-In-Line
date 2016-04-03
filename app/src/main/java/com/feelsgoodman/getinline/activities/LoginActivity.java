@@ -18,14 +18,16 @@ public class LoginActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+    }
 
-
+    @OnClick(R.id.btn_login)
+    public void loginClicked() {
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     @OnClick(R.id.btn_register)
     public void registerClicked() {
-        startActivity(new Intent(this, MainActivity.class));
-        //startActivity(new Intent(this, RegistrationActivity.class));
+        startActivity(new Intent(this, RegistrationActivity.class));
     }
 
     @Override

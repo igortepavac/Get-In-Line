@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
     @Bind(R.id.splash_app_name)
     TextView splashAppName;
 
-    private static final int SPLASH_DURATION = 2500; // millis
+    private static final int SPLASH_DURATION = 1500; // millis
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 new SlideInUnderneathAnimation(splashAppName)
                         .setDirection(Animation.DIRECTION_DOWN)
-                        .setDuration(1500)
+                        .setDuration(1000)
                         .animate();
             }
         }, 500);
